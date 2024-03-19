@@ -1,12 +1,12 @@
 import java.time.LocalDateTime;
 
-public class Game {
+class Game {
 	
-	public int Score;
+	private int Score;
 	
-	public LocalDateTime Date;
+	private LocalDateTime Date;
 	
-	public GameType Type;
+	private GameType Type;
 	
 	public int getScore() {
 		return Score;

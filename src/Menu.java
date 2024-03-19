@@ -30,19 +30,19 @@ public class Menu {
             String choice = scanner.next().toUpperCase();
             switch (choice) {
                 case "V":
-                    // View Previous Games logic
+                    Helpers.PrintGames(name);
                     break;
                 case "A":
-                    // Addition logic
+                    GameChoices.AdditionGame(name);
                     break;
                 case "S":
-                    // Subtraction logic
+                    GameChoices.SubtractionGame(name);
                     break;
                 case "M":
-                    // Multiplication logic
+                    GameChoices.MultiplicationGame(name);
                     break;
                 case "D":
-                    // Division logic
+                    GameChoices.DivisionGame(name);
                     break;
                 case "Q":
                 	System.out.println("Goodbye");
@@ -51,6 +51,10 @@ public class Menu {
                     break;
                 default:
                     System.out.println("Invalid choice! Please try again.");
+                    scanner.nextLine();
+                    continue;
             }
         }
         scanner.close();
+    }
+}
